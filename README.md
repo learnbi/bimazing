@@ -1,208 +1,258 @@
-[![Draftbox](https://res.cloudinary.com/thinkcdnimages/image/upload/v1589291053/Draftbox/draftbox-for-github.svg)](https://draftbox.co)
+<a href="https://novela.narative.co" target="_blank">
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-hero.jpg" alt="gatsby-novela-theme hero image" />
+</a>
 
-# gatsby-ghost-novela-starter
+<br/>
 
-A Gatsby starter for creating blogs from headless Ghost CMS.
+# Novela — A Gatsby theme by Narative
 
-Turn your Ghost blog into a lightning fast static website. This Gatsby theme is a front-end replacement of the Ghost Handlebars engine featuring the Novela skin and functionality. All content is sourced from a headless Ghost CMS.
+With minimal styling and maximum features — including multiple homepage layouts, built-in social sharing and dark mode — Novela makes it easy to start publishing beautiful articles and stories with Gatsby.
 
-> This starter is being used at [Draftbox](https://draftbox.co). Get lightning fast, secure front-end for your WordPress or Ghost blog, in 5 minutes or less, without coding. For our fellow devs, we also provide code export feature.
+Novela is built by the team at [Narative](https://www.narative.co), and built for everyone that loves the web.
 
-## Demo
+<div>
+<a href="https://novela.narative.co" target="_blank">
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-demo.jpg" alt="gatsby-novela-theme live demo" width="295px" />
+</a>
+</div>
 
-> Play with the [Demo](https://ghost-novela-preview.draftbox.co/) to get a first impression.
+<div>
+<a href="https://www.narative.co/design/open/novela" target="_blank">
+<img src="https://raw.githubusercontent.com/narative/gatsby-theme-novela-example/master/assets/gatsby-theme-novela-cta-figma.jpg" alt="gatsby-novela-theme figma link" width="295px" />
+</a>
+</div>
 
-&nbsp;
+[Theme repository](https://github.com/narative/gatsby-theme-novela)
 
-## Features
+## An example repositroy showing how to use gatsby-theme-novela
 
-- Novela theme by Narrative
-- SEO optimized
-- Fully responsive
-- Gatsby images
-- Styled 404 page
-- RSS Feed
-- AMP Pages
-- Sitemap
-- Contact Form
-- Subscribe Form
-- Social Sharing
-- Google Analytics Integration
-- Segment Integration
-- Disqus Integration
-- Composable and extensible
+```sh
+git clone git@github.com:narative/gatsby-theme-novela-example.git
 
-## Getting Started
+cd gatsby-theme-novela-example
 
-1. Install this starter by running
+yarn
 
-   ```bash
-   gatsby new try-ghost https://github.com/draftbox-co/gatsby-ghost-novela-starter
-   ```
+yarn dev
 
-2. Change directory
+yarn build
+```
 
-   ```bash
-   cd try-ghost
-   ```
+## Configuring Novela Theme Plugin
 
-3. Run
+You can customize the path of the generated site or where you store your authors and posts.
+This can be done through the `options` key in the `gatsby-theme-novela` object.
 
-   ```bash
-   gatsby develop
-   ```
+| Option         |     Default     |
+| -------------- | :-------------: |
+| contentAuthors |  content/authors|
+| contentPosts   | content/posts   |
+| basePath       |        /        |
 
-   and visit your site at `http://localhost:8000`.
+This is the default and recommended configuration
 
-## 🧐 What's inside?
+```
+  my-gatsby-site
+  └── content
+    ├── authors
+    └── posts
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── static
-    ├── .gitignore
-    ├── gatsby-config.js
-    ├── yarn.lock
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/static`**: This directory will contain all of the static files required by theme such as `favicon`, `logo` and `robot.txt`.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-5.  **`yarn.lock`** (See `yarn.lock` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-6.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-7.  **`README.md`**: A text file containing useful reference information about your project.
-
-## Configure
+And then configuring your `gatsby-config.js` plugins to include the theme and content sources:
 
 ```js
-//siteConfig.js
+// gatsby-config.js
+plugins: [
+  {
+    resolve: "gatsby-theme-novela",
+    options: {
+      contentPosts: "content/posts",
+      contentAuthors: "content/authors",
+      basePath: "/",
+    },
+  },
+];
+```
+
+## Adding Authors & Posts
+
+Once you've setup the `gatsby-theme-novela` in your plugins you can start creating your first posts. In order to create a post you also need authors.
+
+### Author
+
+| Key      | Required |  Type   |
+| -------- | :------: | :-----: |
+| name     | required | String  |
+| bio      | required | String  |
+| avatar   | required |  Image  |
+| featured | optional | Boolean |
+
+```yml
+- name: Dennis Brotzky
+  bio: |
+    Written by Dennis Brotzky who lives and works in Vancouver building useful things.
+    You should follow him on Twitter.
+  avatar: ./avatars/dennis-brotzky.jpg
+  featured: true
+
+- name: Thiago Costa
+  bio: |
+    Written by Thiago Costa who lives and works in Montreal building useful things.
+    You should follow him on Twitter.
+  avatar: ./avatars/thiago-costa.png
+```
+
+\*At least one Author must have `featured: true`. This author will have their Name, Bio, and Avatar visible on the home pag
+
+### Post
+
+| Key     | Required |    Type    |          Description          |
+| ------- | :------: | :--------: | :---------------------------: |
+| title   | required |   String   |      Also used for slug       |
+| author  | required | String Ref | _Must match a defined Author_ |
+| date    | required |    Date    |       YYYY-MM-DD format       |
+| hero    | required |   Image    |                               |
+| excerpt | required |   String   |      140 character limit      |
+
+```yml
+---
+title: Why Narative loves Gatsby
+author: Dennis Brotzky
+date: 2019-04-27
+hero: ./images/narative-gatsby-hero.jpg
+excerpt: This is a love story about Narative and Gatsby
+---
+# And then under the heading YML you can insert any MDX you like
+# like headings, links, code, images, etc
+# This will show up in the body of your post
+# ...
+```
+
+As you can see, Novela allows you to write posts in [MDX](https://mdxjs.com/). This gives you the ability
+to render Markdown, Code, JSX, images and more within your post body.
+
+### Recommended folder pattern for posts
+
+```
+  my-gatsby-site
+  └── content
+    └── posts
+      └── 2020-01-01-my-first-post
+        ├── index.mdx
+        └── images
+```
+
+From here, you can begin populating `index.mx`
+
+### Configuring siteMetadata
+
+In order to configure the theme to properly genreate the pages and meta tags you must certain
+keys in your `siteMetadata`.
+The ones that are special for this theme are `hero.heading`, `hero.maxWidth`, and `social`.
+
+| Key           | Required |     Type      |
+| ------------- | :------: | :-----------: |
+| title         | required |    string     |
+| name          | required |    string     |
+| siteUrl       | required |    string     |
+| description   | required |    string     |
+| hero.heading  | required |    string     |
+| hero.maxWidth | optional |    number     |
+| social        | optional | [{name, url}] |
+
+#### Example configuration
+
+```js
 module.exports = {
-  siteUrl: "https://ghost-novela-preview.draftbox.co",
-  postsPerPage: 12,
-  siteTitleMeta: "Built with Draftbox",
-  siteDescriptionMeta:
-    "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding.",
-  shareImageWidth: 1000,
-  shareImageHeight: 523,
-  shortTitle: "Built with Draftbox",
-  siteIcon: "favicon.png",
-  backgroundColor: "#e9e9e9",
-  themeColor: "#15171A",
-  apiUrl: "https://ghost.theasdfghjkl.com",
-  header: {
-    navigation: [
+  /**
+   * siteMetadata Used throughout the theme to generate the right SEO links,
+   * social links, and homepage hero
+   **/
+  siteMetadata: {
+    title: `Novela by Narative`,
+    name: `Narative`,
+    siteUrl: `https://novela.narative.co`,
+    description: `This is my description that will be used in the meta tags and important for search results`,
+
+    // important to set the main text that appears in the hero
+    hero: {
+      heading: `Perspectives on technology, design and business from the team at Narative.`,
+      maxWidth: 652,
+    },
+    social: [
       {
-        label: "Home",
-        url: "https://ghost-novela-preview.draftbox.co/",
+        name: `twitter`,
+        url: `https://twitter.com/narative`,
       },
       {
-        label: "Contact",
-        url: "https://ghost-novela-preview.draftbox.co/contact",
-      },
-    ],
-  },
-  footer: {
-    copyright: "Built with Draftbox",
-    navigation: [
-      {
-        label: "Home",
-        url: "https://ghost-novela-preview.draftbox.co/",
+        name: `github`,
+        url: `https://github.com/narative`,
       },
       {
-        label: "Sitemap",
-        url: "https://ghost-novela-preview.draftbox.co/sitemap.xml",
+        name: `instagram`,
+        url: `https://www.instagram.com/narative.co/`,
       },
       {
-        label: "RSS",
-        url: "https://ghost-novela-preview.draftbox.co/rss.xml",
-      },
-      {
-        label: "Contact",
-        url: "https://ghost-novela-preview.draftbox.co/contact",
-      },
-      {
-        label: "External Link",
-        url: "https://spectrum.chat/gatsby-js/themes?tab=posts",
+        name: `dribbble`,
+        url: `https://dribbble.com/narativestudio`,
       },
     ],
   },
-  subscribeWidget: {
-    title: "Subscribe to Built with Draftbox",
-    helpText: "Get the latest posts delivered right to your inbox.",
-    successMessage: "Thanks for subscribing to Built with Draftbox.",
-  },
-  socialLinks: {
-    twitter: "https://twitter.com/draftboxhq",
-    facebook: "https://facebook.com/",
-    instagram: "https://www.instagram.com/",
-    linkedin: "https://linkedin.com",
-    github: "https://github.com/draftbox-co",
-  },
-  contactWidget: {
-    title: "Contact Built with Draftbox",
-    successMessage: "We’ll get in touch with you soon.",
-  },
+  plugins: [
+    /**
+     * In order for the theme to know where you are storing your content
+     * you must pass in where the posts and authors are located.
+     * basePath will define where the theme is served from
+     */
+    {
+      resolve: "gatsby-theme-novela",
+      options: {
+        contentPosts: "content/posts",
+        contentAuthors: "content/authors",
+        basePath: "/",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Novela by Narative`,
+        short_name: `Novela`,
+        start_url: `/`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: `src/assets/favicon.png`,
+      },
+    },
+  ],
 };
 ```
 
-In the configuration shown above, the most important fields to be changed are `siteUrl`, `siteTitleMeta` and `siteDescriptionMeta`. Update at least those to fit your needs.
+## Customizing Novela
 
-## Ghost Content API keys
+### Styles
 
-All content is sourced from a Ghost CMS. If you don't customize the file `.ghost.json` content is fetched from the demo location at `https://cms.gotsby.org`. Surely you want to source your own content. Change the keys to match your own Ghost CMS Content API keys:
+If you want to customize Novela it's possible thanks to how Gatsby themes work. To customize the styling
+you must create a folder, `gatsby-plugin-theme-ui` and apply your Theme UI overrides there.
 
-```bash
-
-    {
-        "development": {
-            "apiUrl": "http://localhost:2368",
-            "contentApiKey": "9fccdb0e4ea5b572e2e5b92942"
-        },
-        "production": {
-            "apiUrl": "http://localhost:2368",
-            "contentApiKey": "9fccdb0e4ea5b572e2e5b92942"
-        }
-    }
+```
+  my-gatsby-site
+  └── src
+    └── gatsby-plugin-theme-ui
+      └── index.js
 ```
 
-## Deploy
+To preserve the default styles make sure you import the `theme` from `gatsby-theme-novela`.
+Here you are able to override the styles for colors, fonts, prism, components, and more.
 
-```bash
-    gatsby build
-```
+### Components
 
-After completion of the build process your static site can be found in the `public/` folder. Copy those files over to your webserver.
+[Component Shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) allows users to override a component in order to customize its rendering.
 
-## Optimizing
+> Gatsby Themes introduce a concept called Component Shadowing. This feature allows users to override a component in order to customize its rendering.
 
-You can disable the default Ghost Handlebars theme front-end by enabling the `Make this site private` flag within your Ghost settings. This enables password protection in front of the Ghost install and sets `<meta name="robots" content="noindex" />` so your Gatsby front-end becomes the source of truth for SEO.
+> With other theming approaches it’s impossible to change aspects of a theme if a configuration option hasn’t been built in. Component Shadowing provides a powerful escape hatch to let users make quick, one-off changes that might not make sense to support in the theme itself.
 
-## Authors
+> Component Shadowing let’s you replace the theme’s original file, gatsby-theme-blog/src/components/bio.js, with your own to implement any changes you need.
 
-- Arun Priyadarshi ([@Gunnerforlife](https://github.com/Gunnerforlife)) – [Draftbox](https://draftbox.co)
-- Keyur Raval ([@thandaanda](https://github.com/thandaanda)) – [Draftbox](https://draftbox.co)
-- Shyam Lohar ([@shyamlohar](https://github.com/shyamlohar)) – [Draftbox](https://draftbox.co)
-- Tanmay Desai ([@tanmaydesai89](https://github.com/tanmaydesai89)) – [Draftbox](https://draftbox.co)
-
-## Contributions
-
-PRs are welcome! Consider contributing to this project if you are missing feature that is also useful for others.
-
-## Credits
-
-Theme Ported from [Novela](https://github.com/narative/gatsby-theme-novela)
-
-Special Thanks to [Ghost](https://ghost.org)
-
-# Copyright & License
-
-Copyright (c) 2020 [Draftbox](https://draftbox.co) - Released under the [MIT license](LICENSE).
+To learn more about Component Shadowing we recommend reading [Gatsby's blog post about it](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) and the [official documentation](https://www.gatsbyjs.org/docs/theme-api/#shadowing).
