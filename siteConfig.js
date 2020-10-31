@@ -1,7 +1,7 @@
 module.exports = {
   siteUrl: "https://bimazing.work",
   postsPerPage: 12,
-  siteTitleMeta: "BImazing",
+  siteTitleMeta: "[bi]mazing",
   siteDescriptionMeta:
     "Learning BI. From Scratch. Real Cases.",
   shareImageWidth: 1000,
@@ -24,7 +24,7 @@ module.exports = {
     ],
   },
   footer: {
-    copyright: "BImazing",
+    copyright: "[bi]mazing",
     navigation: [
       {
         label: "Home",
@@ -42,24 +42,20 @@ module.exports = {
         label: "Contact",
         url: "https://bimazing.work/contact",
       },
-      {
-        label: "External Link",
-        url: "https://spectrum.chat/gatsby-js/themes?tab=posts",
-      },
     ],
   },
   subscribeWidget: {
     visible: true,
-    title: "Subscribe to BImazing",
+    title: "Subscribe to [bi]mazing",
     helpText: "Get the latest posts delivered right to your inbox.",
-    successMessage: "Thanks for subscribing to BImazing.",
+    successMessage: "Thanks for subscribing to [bi]mazing.",
   },
   socialLinks: {
     twitter: "https://twitter.com/",
     facebook: "https://facebook.com/",
     instagram: "https://www.instagram.com/",
     linkedin: "https://linkedin.com",
-    github: "https://github.com/draftbox-co",
+    github: "https://github.com/learnbi",
     pinterest: "",
     youtube: "",
     dribbble: "",
@@ -68,23 +64,23 @@ module.exports = {
     whatsapp: "",
   },
   contactWidget: {
-    title: "Contact BImazing",
+    title: "Contact [bi]mazing",
     successMessage: "We’ll get in touch with you soon.",
   },
   metadata: {
-    title: "BImazing",
+    title: "[bi]mazing",
     description:
       "Learning BI. From Scratch. Real Cases.",
   },
   twitterCard: {
-    title: "BImazing",
+    title: "[bi]mazing",
     description:
       "Learning BI. From Scratch. Real Cases.",
     imageUrl: "twitterImage.png",
     username: "",
   },
   facebookCard: {
-    title: "BImazing",
+    title: "[bi]mazing",
     description:
       "Learning BI. From Scratch. Real Cases.",
     imageUrl: "facebookImage.png",
@@ -92,13 +88,12 @@ module.exports = {
     width: 1000,
     height: 523,
   },
-  siteTitle: "BImazing",
+  siteTitle: "[bi]mazing",
   siteDescription:
     "Learning BI. From Scratch. Real Cases.",
   language: "en",
   logoUrl: "logo.svg",
-  iconUrl:
-    "https://ghost.theasdfghjkl.com/content/images/2020/05/draftbox-colored-icon.png",
+  iconUrl: "logo.png",
   coverUrl: "cover.jpg",
   alternateLogoUrl: "alternateLogo.svg",
   themeConfig: {
