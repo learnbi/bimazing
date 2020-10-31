@@ -12,12 +12,8 @@ let gatsbyPlugins = [
   {
     resolve: `@draftbox-co/gatsby-ghost-novela-theme`,
     options: {
-      contentPosts: "content/posts",
-      contentAuthors: "content/authors",
-      basePath: "/",
-      sources: {
-        local: true,
-        contentful: false    },
+      siteConfig: siteConfig,
+    },
   },
 ];
 
