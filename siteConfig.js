@@ -1,46 +1,46 @@
 module.exports = {
-  siteUrl: "https://ghost-novela-preview.draftbox.co",
+  siteUrl: "https://bimazing.work",
   postsPerPage: 12,
-  siteTitleMeta: "Built with Draftbox",
+  siteTitleMeta: "BImazing",
   siteDescriptionMeta:
-    "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding.",
+    "Learning BI. From Scratch. Real Cases.",
   shareImageWidth: 1000,
   shareImageHeight: 523,
-  shortTitle: "Built with Draftbox",
+  shortTitle: "BImazing",
   siteIcon: "favicon.png",
   backgroundColor: "#e9e9e9",
   themeColor: "#15171A",
-  apiUrl: "https://ghost.theasdfghjkl.com",
+  apiUrl: "https://bimazing.work",
   header: {
     navigation: [
       {
         label: "Home",
-        url: "https://ghost-novela-preview.draftbox.co/",
+        url: "https://bimazing.work/",
       },
       {
         label: "Contact",
-        url: "https://ghost-novela-preview.draftbox.co/contact",
+        url: "https://bimazing.work/contact",
       },
     ],
   },
   footer: {
-    copyright: "Built with Draftbox",
+    copyright: "BImazing",
     navigation: [
       {
         label: "Home",
-        url: "https://ghost-novela-preview.draftbox.co/",
+        url: "https://bimazing.work/",
       },
       {
         label: "Sitemap",
-        url: "https://ghost-novela-preview.draftbox.co/sitemap.xml",
+        url: "https://bimazing.work/sitemap.xml",
       },
       {
         label: "RSS",
-        url: "https://ghost-novela-preview.draftbox.co/rss.xml",
+        url: "https://bimazing.work/rss.xml",
       },
       {
         label: "Contact",
-        url: "https://ghost-novela-preview.draftbox.co/contact",
+        url: "https://bimazing.work/contact",
       },
       {
         label: "External Link",
@@ -50,12 +50,12 @@ module.exports = {
   },
   subscribeWidget: {
     visible: true,
-    title: "Subscribe to Built with Draftbox",
+    title: "Subscribe to BImazing",
     helpText: "Get the latest posts delivered right to your inbox.",
-    successMessage: "Thanks for subscribing to Built with Draftbox.",
+    successMessage: "Thanks for subscribing to BImazing.",
   },
   socialLinks: {
-    twitter: "https://twitter.com/draftboxhq",
+    twitter: "https://twitter.com/",
     facebook: "https://facebook.com/",
     instagram: "https://www.instagram.com/",
     linkedin: "https://linkedin.com",
@@ -68,33 +68,33 @@ module.exports = {
     whatsapp: "",
   },
   contactWidget: {
-    title: "Contact Built with Draftbox",
+    title: "Contact BImazing",
     successMessage: "We’ll get in touch with you soon.",
   },
   metadata: {
-    title: "Built with Draftbox",
+    title: "BImazing",
     description:
-      "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding. Draftbox is a new-age blogging platform for everyone, built on Gatsby.",
+      "Learning BI. From Scratch. Real Cases.",
   },
   twitterCard: {
-    title: "Built with Draftbox",
+    title: "BImazing",
     description:
-      "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding. Draftbox is a new-age blogging platform for everyone, built on Gatsby.",
+      "Learning BI. From Scratch. Real Cases.",
     imageUrl: "twitterImage.png",
-    username: "@DraftboxHQ",
+    username: "",
   },
   facebookCard: {
-    title: "Built with Draftbox",
+    title: "BImazing",
     description:
-      "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding. Draftbox is a new-age blogging platform for everyone, built on Gatsby.",
+      "Learning BI. From Scratch. Real Cases.",
     imageUrl: "facebookImage.png",
     appId: "",
     width: 1000,
     height: 523,
   },
-  siteTitle: "Built with Draftbox",
+  siteTitle: "BImazing",
   siteDescription:
-    "Lightning fast, secure front-end for your WordPress or Ghost blog, without coding.",
+    "Learning BI. From Scratch. Real Cases.",
   language: "en",
   logoUrl: "logo.svg",
   iconUrl:
