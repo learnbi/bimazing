@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "bimazing-gatsby-theme-novela",
+      resolve: "@narative/gatsby-theme-novela",
       options: {
         contentPosts: "content/posts",
         contentAuthors: "content/authors",
