@@ -21,4 +21,4 @@ export default function Logo({ fill }) {
 	  </g>
 	  </svg>
   );
-};
+}
