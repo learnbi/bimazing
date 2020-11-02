@@ -10,7 +10,6 @@ const WebPresenceIcons = () => {
         <div className="wrapper">
             <div className="icons">
                 <a href={config.authorGithub} target="_blank"><FaGithub/></a>
-                /*<a href={config.authorStackoverflow} target="_blank"><FaStackOverflow/></a> */
                 <a href={config.authorLinkedin} target="_blank"><FaLinkedin/></a>
                 <a href={config.authorTwitterAccount} target="_blank"><FaTwitter/></a>
                 <a href={config.authorYoutube} target="_blank"><FaYoutube/></a>
