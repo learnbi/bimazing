@@ -8,8 +8,8 @@ module.exports = {
   siteLanguage: "en",
 
   /* author */
-  authorName: "LearnBI",
-  authorTwitterAccount: "",
+  authorName: "bimazing",
+  authorTwitterAccount: "https://twitter.com/bimazing_work",
   authorGithub: "https://github.com/learnbi",
   authorStackoverflow: "https://stackexchange.com/",
   authorLinkedin: "https://linkedin.com/",
