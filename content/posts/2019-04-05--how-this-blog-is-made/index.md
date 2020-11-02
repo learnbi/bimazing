@@ -8,7 +8,7 @@ author: atte juvonen
 <re-img
     src="paul_zoetemeijer_machinery.jpg"
     title="Photo by Paul Zoetemeijer on Unsplash"
-    href="https://lh3.googleusercontent.com/fife/ABSRlIq9G7TTcHCHk4rWpi6hxtccAk1kMExAAu_2e_0B1duHnh99eRQtlCeXfVe_RFVJGoo6oYhZXiiIs82wySuDdyA41f8fj1WFfkRSIDDmBkc5JXiJ7F7CD_qxIBEr9TRAH8u600llZJ6_NnabFUTi0jiS6Ikyo6l2Fqh-e7fQnOvBGhFDAJDI2RhZxTqlvvdXSym1OdTsPSJR79bdP8iPDeaTt_ZfB3mrL_uy4oxVP1Dryfd7vatFq2mnx56jLXcF0YVvc3ux6MLcoH4A3ND2cQwoR23vqcYMkMXZe4w0kUk5SimuFoZg0DIiTVlQB1qX1z-9aslibiiaI0hCS7suK7TZMTdbklYRtps08LHfV7giwnKI-sodR6WPsqGWxJbeY5Txq_FgC60UbnWsEe6IMn5bRBY-wGWCX4lHGWmE6DxsabuL8fcF9gz2cPwD4z1hNBguIfVV0JhPqok4S4gZZUmZVJdoZce_RCxyApUOcrKaZmMFQgj9spq_6i4A6DPWIQO9okQw7vI9hs6Hqxxhm6MCslPu_WyKu4rLZGZ4HN6aSoeutPU4Bam5smzLmp62l-ahC69zxF0NCO-J-Fa-Lohklg4LuQZ5ca12nGIhCpHcej3-IacooGA7Kqt2gAaxhMyn-IX0maqRW1fGurmfij7_h79EEHekS2VPc2p5sSSb6UNP-wWNDYa7seEWhozbR04wyw3bHkjNQjY2vvRp6BqgWN_UdWw=s16383-w2400"
+    href="https://unsplash.com/photos/QuiM1c65QM4"
     >
 </re-img>
 
