@@ -153,7 +153,7 @@ class Contact extends React.Component {
                   width: 100%;
                   border-radius: 5px;
                   border-width: 2px;
-                  font-family: system-ui;
+                  font-family: "system-ui";
                   font-weight: 400;
                   font-size: 1em;
                 }
@@ -168,7 +168,7 @@ class Contact extends React.Component {
                 #submitButton {
                   color: white;
                   height: auto;
-                  font-family: system-ui;
+                  font-family: "system-ui";
                   font-size: 1.2em;
                   font-weight: 400;
                   padding: 0.5em 3em;
