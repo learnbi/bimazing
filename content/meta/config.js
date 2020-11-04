@@ -20,6 +20,9 @@ module.exports = {
   headerTitle: "[bi]mazing",
   headerSubTitle: "Learn BI. From Scratch. Real Cases.",
 
+  /* google analytics ID*/
+  googleAnalyticsId: "G-3MG3SHZQKB",
+
   /* manifest.json */
   manifestName: "[bi]mazing",
   manifestShortName: "[bi]mazing", // max 12 characters

@@ -32,6 +32,16 @@ const Seo = props => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:type" content="website" />
+      {/* Global site tag (gtag.js) - Google Analytics  */}
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsId}`}></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', "${config.googleAnalyticsId}");
+        `}
+      </script>
     </Helmet>
   );
 };
