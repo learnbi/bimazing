@@ -24,7 +24,7 @@ export default class HTML extends React.Component {
           <link rel="apple-touch-icon" href="/icons/apple-icon-180x180.png" sizes="180x180" />
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
+          <link rel="icon" type="image/png" sizes="100x100" href="/icons/favicon-100x100.png" />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}

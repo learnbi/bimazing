@@ -32,8 +32,8 @@ const Seo = props => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:type" content="website" />
-    </Helmet>
       {/* Global site tag (gtag.js) - Google Analytics  */}
+      <meta name="google-site-verification" content="${config.googleSiteVerification}" />
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${config.googleAnalyticsId}`}></script>
       <script>
         {`
@@ -43,6 +43,7 @@ const Seo = props => {
           gtag('config', "${config.googleAnalyticsId}");
         `}
       </script>
+    </Helmet>
   );
 };
 
